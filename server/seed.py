@@ -4,11 +4,8 @@ from app import app
 from models import db, Plant
 
 with app.app_context():
-
-    # Delete all existing plants to avoid duplicates
     Plant.query.delete()
 
-    # Add the required plants
     aloe = Plant(
         id=1,
         name="Aloe",
